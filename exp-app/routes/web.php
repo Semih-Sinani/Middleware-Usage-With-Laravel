@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Middleware\EnsureTokenIsValid;
 
 /*
 |--------------------------------------------------------------------------
@@ -8,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
+| routes are loaded by the RouteServiceProvider and all of them will`
 | be assigned to the "web" middleware group. Make something great!
 |
 */
@@ -18,5 +19,9 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {
-    return view('login');
+    return view('welcome');
 })-middleware('tokenValid');
+
+Route::get('/midd', function () {
+    return view('login');
+})-name('loginPage');
