@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {  
-    return view('welcome');
+    return view('loginF');
 })->middleware('tokenValid');
 
 Route::get('/midd', function () {
