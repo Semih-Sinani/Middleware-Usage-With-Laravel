@@ -18,10 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
+Route::get('/login', function () {  
     return view('welcome');
-})-middleware('tokenValid');
+})->middleware('tokenValid');
 
 Route::get('/midd', function () {
     return view('login');
-})-name('loginPage');
+})->name('loginPage');

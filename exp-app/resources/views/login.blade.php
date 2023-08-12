@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text">
     <label for="">Username</label>
-    <input type="password">
+    <input type="text" placeholder="Username">
+    <br>
+    <br>
     <label for="">Password</label>
+    <input type="password" placeholder="Password">
 </body>
 </html>
